@@ -25,21 +25,23 @@ section {
 }
 .img_over_layer{
   position: absolute;
-  top: 0px;
+  bottom: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
   z-index: 3;
-  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000de);
-  @apply justify-end items-start flex flex-col p-5 text-white rounded-2xl
+
+  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0.387), #000000);
+  background-size: 150px;
+  background-position: bottom;
+  @apply justify-end items-start flex flex-col px-5 pb-6 text-white rounded-b-2xl
 }
-.img_over_layer:hover{
-  backdrop-filter: blur(3px);
-  transition: all 500ms ease;
-}
-.img_over_layer:active{
-  backdrop-filter: blur(6px);
-  transition: all 60ms ease;
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
 .glass {
